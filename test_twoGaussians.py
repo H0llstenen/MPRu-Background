@@ -7,10 +7,10 @@ c = pickle.load(f)
 
 def function_tot(x, maximum):
     if x <= maximum:
-        # First Gaussian (centered at peak_1, with broader width)
+        # 1st Gaussian (centered peak, broader width)
         return 3500000000 * np.exp(-(x - maximum) ** 2 / 900)
     else:
-        # Second Gaussian (centered at maximum, with sharper width)
+        # 2nd Gaussian (centered peack, sharper width)
         return 3500000000 * np.exp(-(x - maximum) ** 2 / 200) 
 
 energy_axis = c['En']
